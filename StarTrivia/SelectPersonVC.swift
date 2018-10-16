@@ -22,6 +22,7 @@ class SelectPersonVC: UIViewController {
   @IBOutlet var filmsBtn: UIButton!
   
   var personApi = PersonApi()
+  var person: Person!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,6 +36,7 @@ class SelectPersonVC: UIViewController {
     personApi.getRandomPersonAlamo(id: random) { (person) in
       if let person = person {
         self.setupPersonDetails(person: person)
+        self.person = person
       }
     }
     //
@@ -60,21 +62,65 @@ class SelectPersonVC: UIViewController {
     
   }
   
-  @IBAction func homeworldBtnPressed(_ sender: Any) {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
+    if var destination = segue.destination as? PersonProtocol {
+      destination.person = person
+    }
+    
+    /* with enum
+    switch segue.identifier {
+    case Segue.homeworld.rawValue:
+      if let destination = segue.destination as? HomeworldVC {
+        destination.person = person
+      }
+    case Segue.vehicles.rawValue:
+      if let destination = segue.destination as? VehiclesVC {
+        destination.person = person
+      }
+    case Segue.starships.rawValue:
+      if let destination = segue.destination as? StarshipsVC {
+        destination.person = person
+      }
+    case Segue.films.rawValue:
+      if let destination = segue.destination as? FilmsVC {
+        destination.person = person
+      }
+    default:
+      break
+    }
+ */
+    
+//    if segue.identifier == "toHomeworld" {
+//      if let destination = segue.destination as? HomeworldVC {
+//        destination.person = person
+//      }
+//    } else if segue.identifier == "toVehicles" {
+//      if let destination = segue.destination as? VehiclesVC {
+//        destination.person = person
+//      }
+//    } else if segue.identifier == "toStarships" {
+//      if let destination = segue.destination as? StarshipsVC {
+//        destination.person = person
+//      }
+//    } else if segue.identifier == "toFilms" {
+//      if let destination = segue.destination as? FilmsVC {
+//        destination.person = person
+//      }
+//    }
   }
   
-  @IBAction func vehiclesBtnPressed(_ sender: Any) {
-    
+  /*
+  enum Segue: String {
+    case homeworld = "toHomeworld"
+    case vehicles = "toVehicles"
+    case starships = "toStarships"
+    case films = "toFilms"
   }
-  
-  @IBAction func starshipsBtnPressed(_ sender: Any) {
-    
-  }
-  
-  @IBAction func filmsBtnPressed(_ sender: Any) {
-    
-  }
-  
+ */
+}
+
+protocol PersonProtocol {
+  var person: Person! { get set }
 }
 
