@@ -15,6 +15,10 @@
 		6C1F06F82175CDE800F23C51 /* FilmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F06F72175CDE800F23C51 /* FilmsVC.swift */; };
 		6C1F06FA2175D66400F23C51 /* Homeworld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F06F92175D66400F23C51 /* Homeworld.swift */; };
 		6C1F06FC2175D69900F23C51 /* HomeworldApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F06FB2175D69900F23C51 /* HomeworldApi.swift */; };
+		6C1F06FE2175E54800F23C51 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F06FD2175E54800F23C51 /* Vehicle.swift */; };
+		6C1F07002175E71700F23C51 /* VehicleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F06FF2175E71700F23C51 /* VehicleApi.swift */; };
+		6C1F07022175EE7D00F23C51 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F07012175EE7D00F23C51 /* Starship.swift */; };
+		6C1F07042175EEFF00F23C51 /* StarshipApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1F07032175EEFF00F23C51 /* StarshipApi.swift */; };
 		6C3FB68D2171D99100A40E7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FB68C2171D99100A40E7A /* AppDelegate.swift */; };
 		6C3FB68F2171D99100A40E7A /* SelectPersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3FB68E2171D99100A40E7A /* SelectPersonVC.swift */; };
 		6C3FB6922171D99100A40E7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3FB6902171D99100A40E7A /* Main.storyboard */; };
@@ -38,6 +42,10 @@
 		6C1F06F72175CDE800F23C51 /* FilmsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsVC.swift; sourceTree = "<group>"; };
 		6C1F06F92175D66400F23C51 /* Homeworld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeworld.swift; sourceTree = "<group>"; };
 		6C1F06FB2175D69900F23C51 /* HomeworldApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworldApi.swift; sourceTree = "<group>"; };
+		6C1F06FD2175E54800F23C51 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		6C1F06FF2175E71700F23C51 /* VehicleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleApi.swift; sourceTree = "<group>"; };
+		6C1F07012175EE7D00F23C51 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		6C1F07032175EEFF00F23C51 /* StarshipApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipApi.swift; sourceTree = "<group>"; };
 		6C3FB6892171D99100A40E7A /* StarTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3FB68C2171D99100A40E7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C3FB68E2171D99100A40E7A /* SelectPersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPersonVC.swift; sourceTree = "<group>"; };
@@ -157,6 +165,8 @@
 			children = (
 				6C61BD3F2174328C002549BD /* Person.swift */,
 				6C1F06F92175D66400F23C51 /* Homeworld.swift */,
+				6C1F06FD2175E54800F23C51 /* Vehicle.swift */,
+				6C1F07012175EE7D00F23C51 /* Starship.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +185,8 @@
 			children = (
 				6C3FB6AF2171ECE000A40E7A /* PersonApi.swift */,
 				6C1F06FB2175D69900F23C51 /* HomeworldApi.swift */,
+				6C1F06FF2175E71700F23C51 /* VehicleApi.swift */,
+				6C1F07032175EEFF00F23C51 /* StarshipApi.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -308,7 +320,11 @@
 				6C1F06F02175CA1400F23C51 /* FadeEnabledButton.swift in Sources */,
 				6C1F06F62175CDD400F23C51 /* StarshipsVC.swift in Sources */,
 				6C1F06FA2175D66400F23C51 /* Homeworld.swift in Sources */,
+				6C1F06FE2175E54800F23C51 /* Vehicle.swift in Sources */,
 				6C1F06F42175CDCA00F23C51 /* VehiclesVC.swift in Sources */,
+				6C1F07002175E71700F23C51 /* VehicleApi.swift in Sources */,
+				6C1F07042175EEFF00F23C51 /* StarshipApi.swift in Sources */,
+				6C1F07022175EE7D00F23C51 /* Starship.swift in Sources */,
 				6C1F06FC2175D69900F23C51 /* HomeworldApi.swift in Sources */,
 				6C3FB68F2171D99100A40E7A /* SelectPersonVC.swift in Sources */,
 				6C3FB68D2171D99100A40E7A /* AppDelegate.swift in Sources */,
