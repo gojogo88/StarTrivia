@@ -34,15 +34,30 @@ class SelectPersonVC: UIViewController {
     //Step 1: make networking request
     personApi.getRandomPersonAlamo(id: random) { (person) in
       if let person = person {
-        self.nameLbl.text = person.name
-        self.heightLbl.text = person.height
-        self.massLbl.text = person.mass
-        self.hairLbl.text = person.hair
-        self.birthYearLbl.text = person.birthYear
-        self.genderLbl.text = person.gender
+        self.setupPersonDetails(person: person)
       }
     }
     //
+  }
+  
+  func setupPersonDetails(person: Person) {
+    nameLbl.text = person.name
+    heightLbl.text = person.height
+    massLbl.text = person.mass
+    hairLbl.text = person.hair
+    birthYearLbl.text = person.birthYear
+    genderLbl.text = person.gender
+    
+    if person.homeworldUrl.isEmpty {
+      homeworldBtn.isEnabled = false
+    } else {
+      homeworldBtn.isEnabled = true
+    }
+    
+    vehiclesBtn.isEnabled = !person.vehicleUrls.isEmpty
+    starshipsBtn.isEnabled = !person.starshipUrls.isEmpty
+    filmsBtn.isEnabled = !person.filmUrls.isEmpty
+    
   }
   
   @IBAction func homeworldBtnPressed(_ sender: Any) {
