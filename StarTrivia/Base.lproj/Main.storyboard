@@ -25,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space1" translatesAutoresizingMaskIntoConstraints="NO" id="Eyh-fw-qhR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space1" translatesAutoresizingMaskIntoConstraints="NO" id="Eyh-fw-qhR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Trivia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ajj-Rc-Ueh">
@@ -201,6 +201,7 @@
                                                 <state key="normal" image="homeworld_icon"/>
                                                 <connections>
                                                     <action selector="homeworldBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dC-gv-Yyb"/>
+                                                    <segue destination="hu7-QA-Z6f" kind="show" identifier="toHomeworld" id="7ej-pY-Eel"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2S-qo-skx" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
@@ -212,6 +213,7 @@
                                                 <state key="normal" image="vehicles"/>
                                                 <connections>
                                                     <action selector="vehiclesBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TfZ-hz-07I"/>
+                                                    <segue destination="WfE-17-Kfr" kind="show" identifier="toVehicles" id="EzC-dJ-AXE"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9q-Gq-XJE" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
@@ -223,6 +225,7 @@
                                                 <state key="normal" image="starships"/>
                                                 <connections>
                                                     <action selector="starshipsBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X1l-cS-96D"/>
+                                                    <segue destination="qbw-Su-Lm6" kind="show" identifier="toStarships" id="YJo-Rl-cHy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ET6-AA-JcX" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
@@ -234,6 +237,7 @@
                                                 <state key="normal" image="films"/>
                                                 <connections>
                                                     <action selector="filmsBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s7N-0t-z4w"/>
+                                                    <segue destination="bZo-Oe-gDl" kind="show" identifier="toFilms" id="cic-Ad-FPx"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -286,6 +290,110 @@
             </objects>
             <point key="canvasLocation" x="1075.3623188405797" y="133.25892857142856"/>
         </scene>
+        <!--FilmsVC-->
+        <scene sceneID="jsG-rP-hdV">
+            <objects>
+                <viewController id="bZo-Oe-gDl" customClass="FilmsVC" customModule="StarTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JUo-in-BOK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space2" translatesAutoresizingMaskIntoConstraints="NO" id="bFK-a0-emD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bFK-a0-emD" firstAttribute="top" secondItem="JUo-in-BOK" secondAttribute="top" id="DC7-ZI-wgD"/>
+                            <constraint firstItem="Kxv-IL-VGP" firstAttribute="trailing" secondItem="bFK-a0-emD" secondAttribute="trailing" id="njZ-rZ-0fV"/>
+                            <constraint firstItem="bFK-a0-emD" firstAttribute="leading" secondItem="Kxv-IL-VGP" secondAttribute="leading" id="tLf-PA-2fM"/>
+                            <constraint firstAttribute="bottom" secondItem="bFK-a0-emD" secondAttribute="bottom" id="vkL-3i-IKr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kxv-IL-VGP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ied-H7-5no" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="813"/>
+        </scene>
+        <!--StarshipsVC-->
+        <scene sceneID="BET-IM-dOS">
+            <objects>
+                <viewController id="qbw-Su-Lm6" customClass="StarshipsVC" customModule="StarTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pEU-sd-yBR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space4" translatesAutoresizingMaskIntoConstraints="NO" id="V56-uF-eB0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V56-uF-eB0" firstAttribute="top" secondItem="pEU-sd-yBR" secondAttribute="top" id="3MJ-Cd-vHO"/>
+                            <constraint firstItem="1Qu-oi-gBv" firstAttribute="trailing" secondItem="V56-uF-eB0" secondAttribute="trailing" id="PQk-Jo-wiy"/>
+                            <constraint firstItem="V56-uF-eB0" firstAttribute="leading" secondItem="1Qu-oi-gBv" secondAttribute="leading" id="UFp-h1-RrH"/>
+                            <constraint firstAttribute="bottom" secondItem="V56-uF-eB0" secondAttribute="bottom" id="bXO-1u-tWw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Qu-oi-gBv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qP-mP-rUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2283" y="502"/>
+        </scene>
+        <!--HomeworldVC-->
+        <scene sceneID="b1y-mj-wDj">
+            <objects>
+                <viewController id="hu7-QA-Z6f" customClass="HomeworldVC" customModule="StarTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QaS-ZP-Kwq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeworld" translatesAutoresizingMaskIntoConstraints="NO" id="ry6-Xt-N4S">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SdG-03-QW0" firstAttribute="trailing" secondItem="ry6-Xt-N4S" secondAttribute="trailing" id="MAx-jv-fXr"/>
+                            <constraint firstItem="ry6-Xt-N4S" firstAttribute="top" secondItem="SdG-03-QW0" secondAttribute="top" id="ZNP-be-yAR"/>
+                            <constraint firstItem="ry6-Xt-N4S" firstAttribute="leading" secondItem="SdG-03-QW0" secondAttribute="leading" id="h1q-i9-AOL"/>
+                            <constraint firstAttribute="bottom" secondItem="ry6-Xt-N4S" secondAttribute="bottom" id="tLZ-7B-UQs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SdG-03-QW0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BFX-bT-urT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1533" y="-554"/>
+        </scene>
+        <!--VehiclesVC-->
+        <scene sceneID="A2k-CD-xDi">
+            <objects>
+                <viewController id="WfE-17-Kfr" customClass="VehiclesVC" customModule="StarTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nZU-sj-s0r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space3" translatesAutoresizingMaskIntoConstraints="NO" id="5iE-UF-XmX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5iE-UF-XmX" firstAttribute="leading" secondItem="MMi-A6-3ZM" secondAttribute="leading" id="Djv-4a-TaT"/>
+                            <constraint firstItem="5iE-UF-XmX" firstAttribute="top" secondItem="nZU-sj-s0r" secondAttribute="top" id="o0p-Pg-CWU"/>
+                            <constraint firstAttribute="bottom" secondItem="5iE-UF-XmX" secondAttribute="bottom" id="r9e-Nt-ajo"/>
+                            <constraint firstItem="MMi-A6-3ZM" firstAttribute="trailing" secondItem="5iE-UF-XmX" secondAttribute="trailing" id="s6Y-Br-xsd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MMi-A6-3ZM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aap-3N-Yhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2283" y="-181"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="6sg-A7-2Ke">
             <objects>
@@ -307,8 +415,12 @@
     </scenes>
     <resources>
         <image name="films" width="50" height="50"/>
+        <image name="homeworld" width="460" height="864"/>
         <image name="homeworld_icon" width="50" height="50"/>
         <image name="space1" width="699" height="1120"/>
+        <image name="space2" width="329" height="610"/>
+        <image name="space3" width="470" height="877"/>
+        <image name="space4" width="278" height="488"/>
         <image name="starships" width="50" height="50"/>
         <image name="vehicles" width="50" height="50"/>
     </resources>
