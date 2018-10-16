@@ -29,7 +29,7 @@ class SelectPersonVC: UIViewController {
   @IBAction func randomBtnPressed(_ sender: Any) {
     let random = Int.random(in: 1...87) //there are 87 names in SWAPI
     //Step 1: make networking request
-    personApi.getRandomPersonUrlSession(id: random) { (person) in
+    personApi.getRandomPersonAlamo(id: random) { (person) in
       if let person = person {
         self.nameLbl.text = person.name
         self.heightLbl.text = person.height
